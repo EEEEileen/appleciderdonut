@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Video Playlist</title>
+</head>
+<body>
+
+<audio id="audioPlayer" controls autoplay loop>
+   <source src="3.mp3" type="audio/mp3">
+</audio>
+<!-- Video Player -->
+<video id="videoPlayer" width="1520" height="980" controls autoplay>
+
+    <source src="Comp 5.mp4" type="video/mp4">
+	
+</video>
+	
+	
+<script>
+    // Array of local video file names
+    var videoSources = [
+        "Comp 5.mp4",
+        "Comp 4.mp4",
+        "Comp 2.mp4",
+		"Comp 10.mp4",
+		"Comp 3.mp4",
+		"Comp 6.mp4",
+		"Comp 7.mp4",
+		"Comp 8.mp4",
+		"Comp 9.mp4",
+		"Comp 11.mp4",
+		"Comp 12.mp4",
+		"Comp 13.mp4",
+		"Comp 14.mp4",
+		"Comp 15.mp4",
+		"Comp 16.mp4",
+		"Comp 17.mp4",
+		"Comp 18.mp4",
+		"Comp 19.mp4",
+		"Comp 20.mp4",
+		"Comp 21.mp4",
+		"Comp 22.mp4",
+		"Comp 23.mp4",
+		"Comp 24.mp4",
+		"Comp 25.mp4",
+		'Comp 26.mp4',
+		"COmp 27.mp4",
+		"Comp 28.mp4",
+		"Comp 29.mp4",
+     
+    ];
+
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    function playRandomVideo() {
+        var randomIndex = Math.floor(Math.random() * videoSources.length);
+        videoPlayer.src = videoSources[randomIndex];
+        videoPlayer.load();
+        videoPlayer.play();
+    }
+
+    setInterval(playRandomVideo, 10000);
+
+	
+</script>
+	
+	
+</body>
+</html>
